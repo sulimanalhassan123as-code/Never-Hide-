@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SULEIMAN ALHASSAN DIGITALL SOLUTION</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- animated star background -->
+  <div id="starfield" aria-hidden="true"></div>
+
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-title">SULEIMAN ALHASSAN</div>
+      <div class="brand-sub">DIGITALL SOLUTION</div>
+    </div>
+
+    <nav class="top-nav" aria-label="Main navigation">
+      <a href="#" data-open="about">About</a>
+      <a href="#" data-open="services">Services</a>
+      <a href="#" data-open="portfolio">Our Work</a>
+      <a href="#" data-open="advertise">Advertise</a>
+      <a href="#" data-open="faq">FAQ</a>
+      <a class="cta" href="#contact">Get a Quote</a>
+    </nav>
+  </header>
+
+  <!-- HERO (always visible) -->
+  <section class="hero" id="home">
+    <h1>Empowering Businesses Through Innovative Digital Solutions</h1>
+    <p class="lead">We design beautiful websites, grow brands online and help businesses reach customers.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#contact">Get a Quote</a>
+      <a class="btn ghost" href="#" data-open="services">See Services</a>
+    </div>
+  </section>
+
+  <!-- Accordion / Drawers -->
+  <main class="main-content">
+
+    <!-- ABOUT (drawer) -->
+    <details class="accordion" id="about">
+      <summary class="summary">About Us</summary>
+      <div class="content">
+        <p><strong>SULEIMAN ALHASSAN DIGITALL SOLUTION</strong> is a professional digital agency focused on website design, digital marketing and brand development. We combine creativity and measurable strategies to help businesses grow online.</p>
+        <p>Our mission: <em>Empowering businesses through innovation and digital solutions.</em></p>
+      </div>
+    </details>
+
+    <!-- SERVICES (drawer) with nested drawers -->
+    <details class="accordion" id="services">
+      <summary class="summary">Our Services</summary>
+      <div class="content">
+        <p>We offer a complete set of digital services. Click each to learn more.</p>
+
+        <details class="nested">
+          <summary>Website Design</summary>
+          <div class="nested-content">
+            <p>Responsive, modern websites that convert visitors into customers.</p>
+          </div>
+        </details>
+
+        <details class="nested">
+          <summary>Digital Marketing</summary>
+          <div class="nested-content">
+            <p>Paid ads, social campaigns and growth strategies tailored to your market.</p>
+          </div>
+        </details>
+
+        <details class="nested">
+          <summary>SEO (Search Engine Optimization)</summary>
+          <div class="nested-content">
+            <p>Improve your visibility on Google so customers can find you easily.</p>
+          </div>
+        </details>
+
+        <details class="nested">
+          <summary>Content Creation</summary>
+          <div class="nested-content">
+            <p>Professional copy, blog posts and media that tell your brand’s story.</p>
+          </div>
+        </details>
+
+        <details class="nested">
+          <summary>Social Media Management</summary>
+          <div class="nested-content">
+            <p>We plan, post and manage engagement for your social channels.</p>
+          </div>
+        </details>
+      </div>
+    </details>
+
+    <!-- PORTFOLIO (drawer) -->
+    <details class="accordion" id="portfolio">
+      <summary class="summary">Portfolio / Recent Projects</summary>
+      <div class="content">
+        <p>Below are summaries of selected projects (images and case-studies can be added here).</p>
+        <ul class="case-list">
+          <li><strong>Project A</strong> — Website & brand launch for a small business.</li>
+          <li><strong>Project B</strong> — Marketing campaign that increased leads.</li>
+        </ul>
+      </div>
+    </details>
+
+    <!-- ADVERTISE (drawer) -->
+    <details class="accordion" id="advertise">
+      <summary class="summary">Advertise With Us</summary>
+      <div class="content">
+        <p>We offer banner ads, sponsored articles and social promotions. Contact us for rates and packages.</p>
+        <a class="btn" href="#contact">Get Advertising Rates</a>
+      </div>
+    </details>
+
+    <!-- FAQ (drawer) -->
+    <details class="accordion" id="faq">
+      <summary class="summary">FAQ & Resources</summary>
+      <div class="content">
+        <p>Common questions, guides and downloadable resources will be placed here.</p>
+      </div>
+    </details>
+
+  </main>
+
+  <!-- Contact - always visible, not inside drawer -->
+  <aside class="contact-panel" id="contact" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Contact Us</h2>
+    <p>Email: <a href="mailto:sulimanalhassan.123.as@gmail.com">sulimanalhassan.123.as@gmail.com</a></p>
+    <p>Call: <a href="tel:+233248503631">024 850 3631</a></p>
+    <p>WhatsApp: <a class="whatsapp" href="https://wa.me/233502956774" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+
+    <form class="contact-form" action="mailto:sulimanalhassan.123.as@gmail.com" method="post" enctype="text/plain">
+      <input name="name" required placeholder="Your name" />
+      <input name="email" type="email" required placeholder="Your email" />
+      <textarea name="message" rows="5" required placeholder="Your message"></textarea>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </aside>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p><strong>Site created by Suleiman Alhassan</strong></p>
+    <p>© <span id="year"></span> SULEIMAN ALHASSAN DIGITALL SOLUTION. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+  </html>
