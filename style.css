@@ -1,46 +1,15 @@
-/* Disco Background */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(270deg, #ff00ff, #00ffff, #ffff00, #ff0000, #00ff00, #0000ff);
-  background-size: 1200% 1200%;
-  animation: discoBG 15s ease infinite;
-  color: #fff;
-}
-
-/* Background Animation */
-@keyframes discoBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Glowing Circle Around Page */
-body::before {
-  content: "";
-  position: fixed;
-  top: -50px;
-  left: -50px;
-  width: calc(100% + 100px);
-  height: calc(100% + 100px);
-  border: 10px solid transparent;
+/* Star effect */
+.star {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: radial-gradient(circle, white, yellow, transparent);
   border-radius: 50%;
-  background: conic-gradient(
-    from 0deg,
-    red,
-    yellow,
-    lime,
-    cyan,
-    blue,
-    magenta,
-    red
-  );
-  animation: spin 10s linear infinite;
-  z-index: -1;
+  pointer-events: none;
+  animation: starPop 1s ease-out forwards;
 }
 
-/* Circle Rotation */
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+@keyframes starPop {
+  0% { transform: scale(0.5); opacity: 1; }
+  100% { transform: scale(3); opacity: 0; }
 }
