@@ -1,94 +1,46 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
+/* Disco Background */
 body {
-  background: linear-gradient(to bottom, #f0f4ff, #ffffff);
-  color: #333;
-  line-height: 1.6;
-}
-
-/* Header */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #0073e6;
-  padding: 15px 25px;
-  color: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-header h1 {
-  font-size: 20px;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 10px;
-  font-weight: 500;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #0073e6, #00b4d8);
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(270deg, #ff00ff, #00ffff, #ffff00, #ff0000, #00ff00, #0000ff);
+  background-size: 1200% 1200%;
+  animation: discoBG 15s ease infinite;
   color: #fff;
 }
 
-.hero h2 {
-  font-size: 32px;
-  margin-bottom: 15px;
+/* Background Animation */
+@keyframes discoBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.hero p {
-  font-size: 18px;
-  margin-bottom: 25px;
+/* Glowing Circle Around Page */
+body::before {
+  content: "";
+  position: fixed;
+  top: -50px;
+  left: -50px;
+  width: calc(100% + 100px);
+  height: calc(100% + 100px);
+  border: 10px solid transparent;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    red,
+    yellow,
+    lime,
+    cyan,
+    blue,
+    magenta,
+    red
+  );
+  animation: spin 10s linear infinite;
+  z-index: -1;
 }
 
-.btn {
-  display: inline-block;
-  background: #fff;
-  color: #0073e6;
-  padding: 12px 25px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+/* Circle Rotation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
-
-.btn:hover {
-  background: #ff6b6b;
-  color: #fff;
-}
-
-/* Section Styling */
-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-section h2 {
-  margin-bottom: 20px;
-  font-size: 26px;
-  color: #0073e6;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #0073e6;
-  color: #fff;
-  margin-top: 40px;
-   }
