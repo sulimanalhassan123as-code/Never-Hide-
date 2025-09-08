@@ -1,19 +1,29 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Body background disco style */
+body {
+  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #a1c4fd, #c2e9fb);
+  background-size: 400% 400%;
+  animation: disco 15s ease infinite;
+  color: #fff; /* default text white */
+  position: relative;
+  z-index: 1;
 }
 
-/* Rainbow Disco Background */
-body {
-  font-family: Arial, sans-serif;
-  min-height: 100vh;
-  background: linear-gradient(270deg, red, orange, yellow, green, cyan, blue, violet);
-  background-size: 1400% 1400%;
-  animation: disco 20s linear infinite;
-  color: #fff;
-  overflow-x: hidden;
+/* Dark overlay to reduce brightness */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* 40% dark layer */
+  z-index: -1;
+}
+
+/* Text should pop out */
+h1, h2, h3, p, a {
+  color: #fff; 
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7); /* glow for readability */
 }
 
 /* Disco animation */
@@ -21,31 +31,4 @@ body {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-}
-
-/* Glow effect for text */
-h1, h2, h3, p, a {
-  text-shadow: 0 0 10px rgba(255,255,255,0.9), 0 0 20px rgba(255,255,255,0.6);
-}
-
-/* Star pop-up effect (when clicked) */
-.star {
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: white;
-  border-radius: 50%;
-  pointer-events: none;
-  animation: pop 1s ease-out forwards;
-}
-
-@keyframes pop {
-  from {
-    transform: scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: scale(4);
-    opacity: 0;
-  }
 }
