@@ -1,15 +1,51 @@
-/* Star effect */
-.star {
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  background: radial-gradient(circle, white, yellow, transparent);
-  border-radius: 50%;
-  pointer-events: none;
-  animation: starPop 1s ease-out forwards;
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@keyframes starPop {
-  0% { transform: scale(0.5); opacity: 1; }
-  100% { transform: scale(3); opacity: 0; }
+/* Rainbow Disco Background */
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(270deg, red, orange, yellow, green, cyan, blue, violet);
+  background-size: 1400% 1400%;
+  animation: disco 20s linear infinite;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Disco animation */
+@keyframes disco {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glow effect for text */
+h1, h2, h3, p, a {
+  text-shadow: 0 0 10px rgba(255,255,255,0.9), 0 0 20px rgba(255,255,255,0.6);
+}
+
+/* Star pop-up effect (when clicked) */
+.star {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: pop 1s ease-out forwards;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
 }
