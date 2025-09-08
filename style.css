@@ -1,34 +1,38 @@
-/* Body background disco style */
+/* Body background simple blue gradient */
 body {
-  background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #a1c4fd, #c2e9fb);
-  background-size: 400% 400%;
-  animation: disco 15s ease infinite;
-  color: #fff; /* default text white */
-  position: relative;
-  z-index: 1;
-}
-
-/* Dark overlay to reduce brightness */
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* 40% dark layer */
-  z-index: -1;
-}
-
-/* Text should pop out */
-h1, h2, h3, p, a {
+  background: linear-gradient(to bottom right, #1e3c72, #2a5298); /* deep blue shades */
   color: #fff; 
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.7); /* glow for readability */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* Disco animation */
-@keyframes disco {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* Headings styled to stand out */
+h1, h2, h3 {
+  color: #ffd700; /* golden yellow */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
 }
+
+/* Paragraphs and normal text */
+p, a {
+  color: #f0f0f0;
+}
+
+/* Buttons (WhatsApp, Email, Call) */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  background: #ffd700;
+  color: #1e3c72;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #ffc107;
+  transform: scale(1.05);
+  }
